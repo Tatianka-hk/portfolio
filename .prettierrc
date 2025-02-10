@@ -1,0 +1,26 @@
+{
+  "printWidth": 85,
+  "arrowParens": "always",
+  "semi": false,
+  "tabWidth": 2,
+  "overrides": [
+    {
+      "files": "*.ejs",
+      "options": {
+        "parser": "html"
+      }
+    },
+    {
+      "files": "*.js",
+      "options": {
+        "parser": "babel"
+      }
+    },
+    {
+      "files": "*.ts",
+      "options": {
+        "parser": "typescript"
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$\|\.ts$\|\.vue$')
+
+if [ -n "$FILES" ]; then
+echo "Running format on staged files..."
+echo "$FILES" | xargs npx prettier --write --ignore-path .gitignore
+echo "Running ESLint on staged files..."
+echo "$FILES" | xargs npx eslint --ignore-path .gitignore
+else
+echo "No relevant files to lint."
+final
