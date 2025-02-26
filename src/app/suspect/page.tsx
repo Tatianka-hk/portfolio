@@ -4,7 +4,7 @@ SkillCategory = ({ title, skills }) => (
 <div className="mb-6">
   <h3 className="text-xl font-bold text-primary mb-2 font-top-secret">{title}</h3>
   <div className="flex flex-wrap gap-2">
-    {skills.map((skill, index) => (
+    {skills?.map((skill, index) => (
     <span
       key="{index}"
       className="bg-gray-200 px-3 py-1 rounded-full text-sm font-mono"
@@ -35,7 +35,7 @@ SkillCategory = ({ title, skills }) => (
           Technical Evidence
         </h2>
         {Object.entries(technicalSkills)?.map(([category, skills]) => (
-        <SkillCategory key="{category}" title="{category}" skills="{skills}" />
+        <SkillCategory key={category} title={category} skills={skills} />
         ))}
       </div>
 
@@ -57,7 +57,7 @@ SkillCategory = ({ title, skills }) => (
           </h2>
           <div className="bg-gray-100 p-4 rounded-lg">
             { languages?.map( language => (
-            <LanguageLevel language="{language.language}" level="{language.level}" />
+            <LanguageLevel language={language.language} level={language.level} />
             ) )}
           </div>
         </div>
@@ -81,7 +81,7 @@ SkillCategory = ({ title, skills }) => (
     </div>
 
     <div className="flex justify-end mt-8">
-      <button destination="archive" label="Справи" />
+      <Button destination="archive" label="Справи" />
     </div>
   </div>
 </div>
