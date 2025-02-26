@@ -1,10 +1,15 @@
-FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$\|\.ts$\|\.vue$')
+#!/bin/sh
+set -e
+echo "Running Husky pre-commit hook"
+
+FILES=$(git diff --cached --name-only --diff-filter=ACM | grep '\.js$\|\.ts$\|\.tsx$')
 
 if [ -n "$FILES" ]; then
-echo "Running format on staged files..."
-echo "$FILES" | xargs npx prettier --write --ignore-path .gitignore
-echo "Running ESLint on staged files..."
-echo "$FILES" | xargs npx eslint --ignore-path .gitignore
+  echo "Files to lint: $FILES"
+  echo "Running format on staged files..."
+  echo "$FILES" | xargs -d '\n' npx prettier --write --ignore-path .gitignore
+  echo "Running ESLint on staged files..."
+  echo "$FILES" | xargs -d '\n' npx eslint --ignore-path .gitignore
 else
-echo "No relevant files to lint."
-final
+  echo "No relevant files to lint."
+fi

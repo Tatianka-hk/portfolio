@@ -2,7 +2,7 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
 import HTMLFlipBook from 'react-pageflip';
-
+import { Button } from '../../ui';
 const CaseEntry = ({ date, content }) => (
   <div className="mb-6">
     <div className="flex items-center gap-2 text-amber-900 mb-2">
@@ -94,7 +94,7 @@ export default function DetectiveJournal() {
   ];
 
   return (
-    <div className="min-h-screen bg-custom-bg bg-cover bg-center p-4 sm:p-8 flex items-center justify-center">
+    <div className="min-h-screen bg-custom-bg bg-cover bg-center p-4 sm:p-8 flex flex-col gap-2 items-center justify-center">
       <HTMLFlipBook
         width={400}
         height={600}
@@ -185,6 +185,8 @@ export default function DetectiveJournal() {
           </svg>
         </div>
       </HTMLFlipBook>
+
+      <Button destination='testimonies' label='Докази'/>
     </div>
   );
 }
