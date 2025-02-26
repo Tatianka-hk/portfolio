@@ -11,7 +11,7 @@
        name: 'Календар',
        tools: ['Angular', 'Node.js', 'TypeScript'],
        github: 'https://github.com/username/calendar-project',
-       description: 'Веб-додаток календаря з можливістю планування подій та нагадувань.'
+       description: 'Веб-додаток календаря з можливістю плануvвання подій та нагадувань.'
      },
      {
        id: 2,
