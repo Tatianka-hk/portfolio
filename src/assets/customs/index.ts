@@ -1,2 +1,2 @@
-export { default as BookCover } from "./BookCover"
-export { default as BookBackCover } from "./bookBackCover"
+export { default as BookCover } from "./bookCover.tsx"
+export { default as BookBackCover } from "./bookBackCover.tsx"
