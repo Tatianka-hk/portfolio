@@ -1,26 +1,26 @@
 {
-  "printWidth": 85,
-  "arrowParens": "always",
-  "semi": false,
-  "tabWidth": 2,
-  "overrides": [
-    {
-      "files": "*.tsx",
-      "options": {
-        "parser": "html"
-      }
-    },
-    {
-      "files": "*.js",
-      "options": {
-        "parser": "babel"
-      }
-    },
-    {
-      "files": "*.ts",
-      "options": {
-        "parser": "typescript"
-      }
-    }
-  ]
+    "printWidth": 85,
+    "arrowParens": "always",
+    "semi": false,
+    "tabWidth": 4,
+    "overrides": [
+        {
+            "files": "*.tsx",
+            "options": {
+                "parser": "html"
+            }
+        },
+        {
+            "files": "*.js",
+            "options": {
+                "parser": "babel"
+            }
+        },
+        {
+            "files": "*.ts",
+            "options": {
+                "parser": "typescript"
+            }
+        }
+    ]
 }

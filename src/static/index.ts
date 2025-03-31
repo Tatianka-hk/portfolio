@@ -1,7 +1,8 @@
 export {
-  softSkills,
-  technicalSkills,
-  languages,
-  eduction,
-  experience,
+    softSkills,
+    technicalSkills,
+    languages,
+    eduction,
+    experience,
+    projects,
 } from "./skillStatic"
