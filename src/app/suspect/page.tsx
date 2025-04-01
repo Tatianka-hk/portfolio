@@ -36,9 +36,9 @@ SkillCategory = ({ title, skills }) => (
                 </h2>
                 {Object.entries(technicalSkills)?.map(([category, skills]) => (
                 <SkillCategory
-                    key="{category}"
-                    title="{category}"
-                    skills="{skills}"
+                    key={category}
+                    title={category}
+                    skills={skills}
                 />
                 ))}
             </div>
@@ -66,8 +66,8 @@ SkillCategory = ({ title, skills }) => (
                     <div className="bg-gray-100 p-4 rounded-lg">
                         { languages?.map( language => (
                         <LanguageLevel
-                            language="{language.language}"
-                            level="{language.level}"
+                            language={language.language}
+                            level={language.level}
                         />
                         ) )}
                     </div>
@@ -96,7 +96,7 @@ SkillCategory = ({ title, skills }) => (
         </div>
 
         <div className="flex justify-end mt-8">
-            <button destination="archive" label="Справи" />
+            <Button destination="archive" label="Справи" />
         </div>
     </div>
 </div>
