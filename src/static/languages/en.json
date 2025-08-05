@@ -1,0 +1,86 @@
+{
+    "home": {
+        "pib": "Тetiana Gurkivska",
+        "description": "Suspected of creating innovative solutions, high-quality code and creative projects",
+        "continue": "The investigation continues...",
+        "start": "Start the investigation"
+    },
+    "suspect": {
+        "suspect_profile": "Suspect profile: Тetiana Gurkivska",
+        "hardskills": "Technical Evidence",
+        "softskills": "Behavioral Analysis",
+        "education": "Background Check",
+        "languages": "Communications Proficiency",
+        "nextButton": "Cases"
+    },
+    "technicalSkills": {
+        "coreTechnologies": "Core Technologies",
+        "developmentTools": "Development Tools",
+        "authAndSecurity": "Authentication & Security",
+        "databases": "Databases",
+        "frontend": "Frontend",
+        "other": "Other"
+    },
+    "softSkills": [
+        "Strong analytical and problem-solving abilities",
+        "Excellent adaptability to changing requirements",
+        "Effective communication and team collaboration",
+        "Quick learning and strong technical aptitude",
+        "Stress-resistance and attention to detail"
+    ],
+    "languages": {
+        "ukrainian": "Ukrainian",
+        "english": "English",
+        "spanish": "Spanish",
+        "catalan": "Catalan",
+        "russian": "Russian",
+        "native": "Native Speaker"
+    },
+    "education": {
+        "specialization": "Bachelor of Informatics and Computer Technology",
+        "university": "Polytechnic Institute"
+    },
+    "archive": {
+        "title": "Detective Journal",
+        "description": "The following pages contain my investigation into the suspicious activities of Tetiana Gurkivska, a suspected mastermind of digital innovations...",
+        "button": "Contacts",
+        "baseExperience": {
+            "basetis": {
+                "title": "Basetis Investigation",
+                "description": "This investigation compiles evidence of Tetiana Gurkivska's activities: development of two full-fledged web applications with authentication (JWT, OAuth2), CRM module, Vitest testing, and data visualization."
+            },
+            "softpro": {
+                "title": "Softpro Incident",
+                "description": "New findings indicate rapid expansion of technical capabilities: development of internal libraries, Mapbox-based mapping, ECharts-based data visualization, and geodata processing.",
+                "technicalEvidence": "Technical Evidence"
+            },
+            "docsSpace": {
+                "title": "DocsSpace Operation",
+                "description": "Development of two web applications, a desktop app, a Telegram bot, payment processing features, and data prediction tools."
+            }
+        },
+        "other": {
+            "science": {
+                "title": "Scientific Community",
+                "description": "Development of applications for the Ukrainian scientific community using Electron, Vue, and Node.js."
+            },
+            "mriia": {
+                "title": "Mriia.events Project",
+                "description": "Contributed to the development of a web application for managing public events based on React (Next.js)."
+            }
+        }
+    },
+    "projects": {
+        "calendar": "Web application for scheduling tasks and events with notifications.",
+        "weather": "Web application for viewing weather forecasts for several days ahead.",
+        "flashcards": "Web application for creating flashcards."
+    },
+    "contacts": {
+        "email": "Email",
+        "phone": "Phone",
+        "atention": "Use only in case of emergency",
+        "title": "Investigator: Tetiana Gurkivska",
+        "description": "If you have a serious task, contact through verified channels. Don't leave traces.",
+        "copied": "Copied to clipboard"
+    }
+}

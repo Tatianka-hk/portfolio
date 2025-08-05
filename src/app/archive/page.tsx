@@ -2,38 +2,49 @@
 import React from 'react';
 import { Calendar } from 'lucide-react';
 import HTMLFlipBook from 'react-pageflip';
-import { Button } from '../../ui';
-import {experience} from '../../static'
-import { BookBackCover, BookCover } from '../../assets/customs';
-const CaseEntry = ({ date, content }) => (
-  <div className="mb-6">
-    <div className="flex items-center gap-2 text-amber-900 mb-2" >
-      <Calendar size={16} />
-      <span className="font-bold font-handwritten">{date}</span>
-    </div>
-    <p className="font-handwritten leading-relaxed">{content}</p>
-  </div>
-);
 
-const experiencePages = experience?.map((item)=>{
+import { Button } from '../../ui';
+import { experience } from '../../static'
+import { BookBackCover, BookCover } from '../../assets/customs';
+import { useTranslation } from 'react-i18next'
+
+const CaseEntry = ({ date, content }:
+  {
+    date: string;
+    content: string;
+  }
+) => {
+  const { t } = useTranslation()
+  return (
+    <div className="mb-6">
+      <div className="flex items-center gap-2 text-amber-900 mb-2" >
+        <Calendar size={16} />
+        <span className="font-bold font-handwritten">{t(date)}</span>
+      </div>
+      <p className="font-handwritten leading-relaxed">{t(content)}</p>
+    </div>
+  )
+};
+
+
+const experiencePages = experience?.map((item) => {
   const page = {
     title: item.title,
     content: (
       <>
         <CaseEntry
-          date= {item.date}
+          date={item.date}
           content={item?.description}
         />
-        { item.listInstruments?.length && (
-        <div className="border-l-2 border-amber-900 pl-4 my-4 font-mono text-sm">
-          <h3 className="font-bold"> {item.nameList} :</h3>
-          <ul className="list-disc ml-4 space-y-1">
-            { item?.listInstruments.map( tool =>(
-              <li> {tool} </li>
-            ))}
-          </ul>
-        </div>
-         )}
+        {item.listInstruments?.length && (
+          <div className="border-l-2 border-amber-900 pl-4 my-4 font-mono text-sm">
+            <ul className="list-disc ml-4 space-y-1">
+              {item?.listInstruments.map(tool => (
+                <li> {tool} </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </>
     )
   }
@@ -41,17 +52,17 @@ const experiencePages = experience?.map((item)=>{
 })
 
 export default function DetectiveJournal() {
+  const { t } = useTranslation();
   const journalEntries = [
     {
       title: "Case File: Developer Activities",
       content: (
         <div className="p-6">
           <h2 className="text-2xl font-bold text-amber-900 mb-6 text-center font-handwritten">
-            Detective's Journal
+            {t('archive.title')}
           </h2>
           <p className="font-handwritten text-sm mb-6 italic">
-            "The following pages contain my investigation into the suspicious activities
-            of one Tetiana Gurkivska, a suspected mastermind of digital innovations..."
+            {t('archive.description')}
           </p>
         </div>
       )
@@ -60,13 +71,12 @@ export default function DetectiveJournal() {
   ];
 
   return (
-    <div className="min-h-screen bg-custom-bg bg-cover bg-center p-4 sm:p-8 flex flex-col gap-2 items-center justify-center max-h-[100vh] overflow-hidden scroll-none"
-    >
+    <div className='flex flex-col justify-center items-center'>
       <HTMLFlipBook
-        width={400}
-        height={600}
+        width={330}
+        height={500}
         maxWidth={400}
-        maxHeight={800}
+        maxHeight={600}
         maxShadowOpacity={0.8}
         showCover={true}
         mobileScrollSupport={true}
@@ -75,7 +85,7 @@ export default function DetectiveJournal() {
         flippingTime={1000}
       >
         <div className="cover flex justify-center w-full  h-full">
-          <BookCover/>
+          <BookCover />
         </div>
 
         {/* Пуста сторінка (задня частина обкладинки) */}
@@ -88,11 +98,12 @@ export default function DetectiveJournal() {
         ))}
 
         <div className="cover flex justify-center items-center bg-black">
-          <BookBackCover/>
+          <BookBackCover />
         </div>
       </HTMLFlipBook>
-
-      <Button destination='testimonies' label='Докази'/>
+      <div className='flex w-full justify-end'>
+        <Button destination='contacts' label={t('archive.button')} />
+      </div>
     </div>
   );
 }
