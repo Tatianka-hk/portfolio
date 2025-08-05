@@ -1,9 +1,17 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Selectable } from '../types';
 
-const Dropdown = ({ options, defaultOption, onChange }) => {
+interface DropdownProps {
+    options: Selectable[];
+    defaultOption?: string;
+    onChange: (value: string) => void;
+}
+
+const Dropdown: React.FC<DropdownProps> = ({ options, defaultOption, onChange }) => {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState(defaultOption || options[0].label);
+    const dropdownRef = useRef<HTMLDivElement>(null);
 
     const toggleDropdown = () => {
         setIsOpen((prev) => !prev);
@@ -16,8 +24,21 @@ const Dropdown = ({ options, defaultOption, onChange }) => {
         onChange(option.value);
     };
 
+
+    useEffect(() => {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+
     return (
-        <div className="relative inline-block w-[100px]">
+        <div className="relative inline-block w-[100px]" ref={dropdownRef}>
             <div
                 className="bg-paper-bg border border-gray-300 rounded-md p-2 cursor-pointer"
                 onClick={toggleDropdown}

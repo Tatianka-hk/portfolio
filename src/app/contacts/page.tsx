@@ -2,6 +2,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { contacts } from '../../static/skillStatic';
+import { Selectable } from '../../types';
 
 
 const Badge = ({ label }: { label: string }) => {
@@ -14,10 +15,7 @@ const Badge = ({ label }: { label: string }) => {
 }
 
 const ContactItem = (
-  { label, value }: {
-    label: string,
-    value: string
-  }
+  { label, value }: Selectable
 ) => {
   const { t } = useTranslation();
   const [isShow, setShow] = React.useState<boolean>(false);
@@ -59,7 +57,7 @@ const DetectiveContacts = () => {
       <div className="border-t-2 border-dashed border-[#3b2f2f] my-6"></div>
 
       <div className="flex justify-between">
-        {contacts?.map((contact) => (
+        {contacts?.map((contact: Selectable) => (
           <ContactItem
             key={contact.label}
             label={contact.label}

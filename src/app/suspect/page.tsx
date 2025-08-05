@@ -41,8 +41,11 @@ export default function Suspect() {
                                 {t('suspect.softskills')}
                             </h2>
                             <ul className="space-y-2">
-                                {softSkills?.map(skill => (
-                                    <li className="font-top-secret">➤ {t(`${skill}`)}</li>
+                                {softSkills?.map((skill: string, index: number) => (
+                                    <li
+                                        key={index}
+                                        className="font-top-secret"
+                                    >➤ {t(`${skill}`)}</li>
                                 ))}
                             </ul>
                         </div>
@@ -54,8 +57,9 @@ export default function Suspect() {
                                 {t('suspect.languages')}
                             </h2>
                             <div className="bg-gray-100 p-4 rounded-lg">
-                                {languages?.map(language => (
+                                {languages?.map((language: { language: string; level: string; }, index: number) => (
                                     <LanguageLevels
+                                        key={index}
                                         language={language.language}
                                         level={language.level}
                                     />
@@ -70,8 +74,11 @@ export default function Suspect() {
                                 {t('suspect.education')}
                             </h2>
                             <div className="flex flex-col gap-2">
-                                {education?.map((step) => (
-                                    <div className="bg-gray-100 p-4 rounded-lg">
+                                {education?.map((step, index: number) => (
+                                    <div
+                                        key={index}
+                                        className="bg-gray-100 p-4 rounded-lg"
+                                    >
                                         <p className="font-top-secret">
                                             ➤ {t(step.specialization)}
                                         </p>

@@ -1,3 +1,5 @@
+import { Selectable } from "../types"
+
 export const technicalSkills = {
     "technicalSkills.coreTechnologies": [
         "JavaScript",
@@ -104,7 +106,7 @@ export const projects = [
         name: "Calendar",
         tools: ["Vue", "Node.js", "TypeScript", "mongoDB"],
         github: "https://github.com/username/calendar-project",
-        description: "projects.calendar.description",
+        description: "projects.calendar",
         x: -18,
         y: -18,
     },
@@ -113,7 +115,7 @@ export const projects = [
         name: "WeatherApp",
         tools: ["Vue", "Node.js", "TypeScript"],
         github: "https://github.com/Tatianka-hk/app-weather",
-        description: "projects.weather.description",
+        description: "projects.weather",
         x: 20,
         y: -20,
     },
@@ -122,13 +124,13 @@ export const projects = [
         name: "Flashcards",
         tools: ["Vue", "Node.js", "TypeScript"],
         github: "https://github.com/Tatianka-hk/flashcards",
-        description: "projects.notes.description",
+        description: "projects.flashcards",
         x: -10,
         y: 20,
     },
 ]
 
-export const contacts = [
+export const contacts: Selectable[] = [
     {
         label: "contacts.email",
         value: "t0681689150@gmail.com",

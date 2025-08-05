@@ -38,9 +38,10 @@ const experiencePages = experience?.map((item) => {
         />
         {item.listInstruments?.length && (
           <div className="border-l-2 border-amber-900 pl-4 my-4 font-mono text-sm">
-            <ul className="list-disc ml-4 space-y-1">
-              {item?.listInstruments.map(tool => (
-                <li> {tool} </li>
+            <ul className="list-disc ml-4 space-y-1"
+            >
+              {item?.listInstruments.map((tool, index) => (
+                <li key={index}> {tool} </li>
               ))}
             </ul>
           </div>
@@ -92,7 +93,9 @@ export default function DetectiveJournal() {
         <div className="bg-gray-100"></div>
 
         {journalEntries.map((entry, index) => (
-          <div key={index} className={`page p-6 ${index % 2 !== 0 ? 'bg-gray-100' : 'bg-white'}`}>
+          <div
+            key={index}
+            className={`page p-6 ${index % 2 !== 0 ? 'bg-gray-100' : 'bg-white'}`}>
             {entry.content}
           </div>
         ))}
