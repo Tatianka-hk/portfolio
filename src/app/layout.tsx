@@ -11,7 +11,7 @@ export default function
 
     return (
         <html lang={i18n.language}>
-            <body className="min-h-screen bg-custom-bg bg-cover bg-center p-4 sm:px-8  max-h-[100vh] overflow-hidden scroll-none"
+            <body className="min-h-screen bg-custom-bg bg-cover bg-center p-4 sm:px-8  max-h-[100vh] overflow-y-auto overflow-x-hidden scroll-none"
             >
                 <div className=" flex justify-end w-full mb-[40px]">
                     <LanguageSelect />
