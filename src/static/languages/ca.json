@@ -1,0 +1,86 @@
+{
+    "home": {
+        "pib": "Tetiana Gurkivska",
+        "description": "Sospitosa de crear solucions innovadores, codi d’alta qualitat i projectes creatius",
+        "continue": "Continuació de la investigació...",
+        "start": "Iniciar investigació"
+    },
+    "suspect": {
+        "suspect_profile": "Perfil de la sospitosa: Tetiana Gurkivska",
+        "hardskills": "Proves tècniques",
+        "softskills": "Anàlisi conductual",
+        "education": "Verificació de dades",
+        "languages": "Nivell de competències comunicatives",
+        "nextButton": "Casos"
+    },
+    "technicalSkills": {
+        "coreTechnologies": "Tecnologies principals",
+        "developmentTools": "Eines de desenvolupament",
+        "authAndSecurity": "Autenticació i seguretat",
+        "databases": "Bases de dades",
+        "frontend": "Frontend",
+        "other": "Altres"
+    },
+    "softSkills": [
+        "Sòlides habilitats analítiques i de resolució de problemes",
+        "Excel·lent adaptabilitat a requisits canviants",
+        "Comunicació efectiva i treball en equip",
+        "Aprenentatge ràpid i bona capacitat tècnica",
+        "Resistència a l'estrès i atenció al detall"
+    ],
+    "languages": {
+        "ukrainian": "Ucraïnès",
+        "english": "Anglès",
+        "spanish": "Espanyol",
+        "catalan": "Català",
+        "russian": "Rus",
+        "native": "Llengua materna"
+    },
+    "education": {
+        "specialization": "Grau en Informàtica i Tecnologia Computacional",
+        "university": "Institut Politècnic"
+    },
+    "projects": {
+        "calendar": "Aplicació web de calendari amb planificació d'esdeveniments i recordatoris.",
+        "weather": "Aplicació per consultar la previsió meteorològica per a diversos dies.",
+        "flashcards": "Aplicació per crear targetes d'estudi (flashcards)."
+    },
+    "archive": {
+        "title": "Diari d'investigació",
+        "description": "Les pàgines següents contenen la meva investigació sobre les activitats sospitoses de Tetiana Gurkivska, sospitosa d’innovacions digitals...",
+        "button": "Proves",
+        "baseExperience": {
+            "basetis": {
+                "title": "Investigació Basetis",
+                "description": "Aquesta investigació recopila proves de les activitats de Tetiana Gurkivska: desenvolupament de dues aplicacions web completes amb autenticació (JWT, OAuth2), mòdul CRM, proves amb Vitest i visualització de dades."
+            },
+            "softpro": {
+                "title": "Incident Softpro",
+                "description": "Noves dades indiquen una ràpida expansió de les capacitats tècniques: desenvolupament de biblioteques internes, integració de Mapbox, visualització amb ECharts i processament de geodades.",
+                "technicalEvidence": "Proves tècniques"
+            },
+            "docsSpace": {
+                "title": "Operació DocsSpace",
+                "description": "Desenvolupament de dues aplicacions web, una aplicació d'escriptori, un bot de Telegram, processament de pagaments i eines de predicció de dades."
+            }
+        },
+        "other": {
+            "science": {
+                "title": "Comunitat científica",
+                "description": "Desenvolupament d’aplicacions per a la comunitat científica ucraïnesa amb Electron, Vue i Node.js."
+            },
+            "mriia": {
+                "title": "Projecte Mriia.events",
+                "description": "Participació en el desenvolupament d’una aplicació web per gestionar esdeveniments públics amb React (Next.js)."
+            }
+        }
+    },
+    "contacts": {
+        "email": "Correu electrònic",
+        "phone": "Telèfon",
+        "atention": "Utilitza-ho només en cas d’emergència",
+        "title": "Recerca: Tetiana Gurkivska",
+        "description": "Si tens una missió realment important, contacta a través de canals verificats. No deixis rastre.",
+        "copied": "Copiat al porta-retalls"
+    }
+}
