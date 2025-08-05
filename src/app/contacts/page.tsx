@@ -20,12 +20,16 @@ const ContactItem = (
   const { t } = useTranslation();
   const [isShow, setShow] = React.useState<boolean>(false);
 
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(value);
-    setShow(true);
-    setTimeout(() => {
-      setShow(false);
-    }, 1000);
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(value);
+      setShow(true);
+      setTimeout(() => {
+        setShow(false);
+      }, 1000);
+    } catch (err) {
+      console.error(err);
+    }
   }
   return (
     <div className="flex flex-col items-center group cursor-pointer" onClick={copyToClipboard}>
@@ -33,7 +37,7 @@ const ContactItem = (
         <Badge label={t('contacts.copied')} />
       }
       <div className="bg-[#e4dcc2] p-2 text-sm w-28 text-center border border-[#b8a16f] group-hover:bg-[#d7c59a] transition">
-        {t(label)}
+        {label}
       </div>
       <div className="text-xs mt-1 text-gray-600 group-hover:underline truncate max-w-[100px] w-fit">
         {value}
