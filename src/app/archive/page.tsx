@@ -1,18 +1,16 @@
 'use client'
 import React from 'react';
-import { Calendar } from 'lucide-react';
+import { Building, Calendar } from 'lucide-react';
 import HTMLFlipBook from 'react-pageflip';
 
 import { Button } from '../../ui';
 import { experience } from '../../static'
 import { BookBackCover, BookCover } from '../../assets/customs';
 import { useTranslation } from 'react-i18next'
+import { ExperienceItem } from '../../types';
 
-const CaseEntry = ({ date, content }:
-  {
-    date: string;
-    content: string;
-  }
+const CaseEntry = ({ date, description, title }:
+  ExperienceItem
 ) => {
   const { t } = useTranslation()
   return (
@@ -21,20 +19,24 @@ const CaseEntry = ({ date, content }:
         <Calendar size={16} />
         <span className="font-bold font-handwritten">{t(date)}</span>
       </div>
-      <p className="font-handwritten leading-relaxed">{t(content)}</p>
+      <div className="flex items-center gap-2 text-amber-900 mb-2 " >
+        <span className="font-bold font-handwritten">{t(title)}</span>
+      </div>
+      <p className="font-handwritten leading-relaxed">{t(description)}</p>
     </div>
   )
 };
 
 
-const experiencePages = experience?.map((item) => {
+const experiencePages = experience?.map((item: ExperienceItem) => {
   const page = {
     title: item.title,
     content: (
       <>
         <CaseEntry
           date={item.date}
-          content={item?.description}
+          description={item?.description}
+          title={item?.title}
         />
         {item.listInstruments?.length && (
           <div className="border-l-2 border-amber-900 pl-4 my-4 font-mono text-sm">

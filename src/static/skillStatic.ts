@@ -1,4 +1,4 @@
-import { Selectable } from "../types"
+import { ExperienceItem, Selectable } from "../types"
 
 export const technicalSkills = {
     "technicalSkills.coreTechnologies": [
@@ -56,10 +56,10 @@ export const education = [
     },
 ]
 
-export const experience = [
+export const experience: ExperienceItem[] = [
     {
         title: "archive.baseExperience.basetis.title",
-        date: "October 2023",
+        date: "October 2023 - February 2024",
         description: "archive.baseExperience.basetis.description",
         listInstruments: [
             "Vue",
@@ -75,7 +75,7 @@ export const experience = [
     },
     {
         title: "archive.baseExperience.softpro.title",
-        date: "June 2024",
+        date: "June 2024 - November 2024",
         description: "archive.baseExperience.softpro.description",
         listInstruments: [
             "Custom UI component library",

@@ -10,11 +10,14 @@ export default function LanguageSelect() {
     const { i18n } = useTranslation();
 
     const onChangeLanguage = (lang: string) => {
+        localStorage.setItem('lang', lang);
         i18n.changeLanguage(lang);
     }
 
     const findDefaultLanguage = () => {
-        return languagesi18.find((language) => language.value === i18n.language)?.label;
+        const defaultLang = localStorage.getItem('lang') || 'uk';
+        i18n.changeLanguage(defaultLang);
+        return languagesi18.find((language) => language.value === defaultLang)?.label;
     }
     return (
         <SelectInput
