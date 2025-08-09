@@ -82,5 +82,6 @@
         "title": "Recerca: Tetiana Gurkivska",
         "description": "Si tens una missió realment important, contacta a través de canals verificats. No deixis rastre.",
         "copied": "Copiat al porta-retalls"
-    }
+    },
+    "secret": "SECRETO"
 }
