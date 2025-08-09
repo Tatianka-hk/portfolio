@@ -37,7 +37,7 @@ const ContactItem = (
         <Badge label={t('contacts.copied')} />
       }
       <div className="bg-[#e4dcc2] p-2 text-sm w-28 text-center border border-[#b8a16f] group-hover:bg-[#d7c59a] transition">
-        {label}
+        {t(label)}
       </div>
       <div className="text-xs mt-1 text-gray-600 group-hover:underline truncate max-w-[100px] w-fit">
         {value}
