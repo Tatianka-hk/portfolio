@@ -9,17 +9,15 @@ import { languagesi18 } from '../static';
 
 export default function LanguageSelect() {
     const { i18n } = useTranslation();
-    const [currentLanguage, setCurrentLanguage] = useState(languagesi18[0]);
+    const [currentLanguage, setCurrentLanguage] = useState<string>('');
 
     useEffect(() => {
         if (typeof window !== 'undefined') {
-            const storedLang = localStorage.getItem('lang') || languagesi18[0].value;
-            const foundLang =
-                languagesi18.find((language) => language.value === storedLang) || languagesi18[0];
-            i18n.changeLanguage(storedLang);
-            setCurrentLanguage(foundLang);
+            const storedLang = localStorage.getItem('lang') || "en";
+            const found = languagesi18.find(l => l.value === storedLang)!;
+            setCurrentLanguage(found.label);
         }
-    }, [i18n]);
+    }, []);
 
 
     const onChangeLanguage = (lang: string) => {
@@ -30,7 +28,7 @@ export default function LanguageSelect() {
     return (
         <SelectInput
             options={languagesi18}
-            defaultOption={currentLanguage.label}
+            defaultOption={currentLanguage}
             onChange={onChangeLanguage}
         />
     )

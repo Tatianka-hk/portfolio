@@ -36,6 +36,10 @@ const Dropdown: React.FC<DropdownProps> = ({ options, defaultOption, onChange })
         return () => document.removeEventListener('mousedown', handleClickOutside);
     }, []);
 
+    useEffect(() => {
+        setSelectedOption(defaultOption || options[0].label);
+    }, [defaultOption])
+
 
     return (
         <div className="relative inline-block w-[100px]" ref={dropdownRef}>

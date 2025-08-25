@@ -20,7 +20,7 @@ export default function Suspect() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="space-y-6 mb-8 min-w-0">
+                    <div className=" mb-8 min-w-0">
                         <h2 className="text-2xl font-bold text-primary mb-4 font-top-secret">
                             {t('suspect.hardskills')}
                         </h2>
