@@ -3,6 +3,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { contacts } from '../../static/skillStatic';
 import { Selectable } from '../../types';
+import { Button } from '../../ui';
 
 
 const Badge = ({ label }: { label: string }) => {
@@ -50,29 +51,34 @@ const DetectiveContacts = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="bg-paper-bg p-8 rounded-lg shadow-md max-w-lg mx-auto relative  font-mono text-[#2e1e1e]">
-      <h2 className="text-2xl font-bold text-center mb-6 uppercase tracking-widest">
-        🔴 {t('contacts.title')}
-      </h2>
-      <p className="mb-4 text-center italic">
-        {t('contacts.description')}
-      </p>
+    <div>
+      <div className="bg-paper-bg p-8 rounded-lg shadow-md max-w-lg mx-auto relative  font-mono text-[#2e1e1e]">
+        <h2 className="text-2xl font-bold text-center mb-6 uppercase tracking-widest">
+          🔴 {t('contacts.title')}
+        </h2>
+        <p className="mb-4 text-center italic">
+          {t('contacts.description')}
+        </p>
 
-      <div className="border-t-2 border-dashed border-[#3b2f2f] my-6"></div>
+        <div className="border-t-2 border-dashed border-[#3b2f2f] my-6"></div>
 
-      <div className="flex justify-between">
-        {contacts?.map((contact: Selectable) => (
-          <ContactItem
-            key={contact.label}
-            label={contact.label}
-            value={contact.value}
-          />
-        ))}
+        <div className="flex justify-between">
+          {contacts?.map((contact: Selectable) => (
+            <ContactItem
+              key={contact.label}
+              label={contact.label}
+              value={contact.value}
+            />
+          ))}
+        </div>
+
+        <p className="mt-6 text-center text-xs italic opacity-60">
+          🔐 {t('contacts.atention')}
+        </p>
       </div>
-
-      <p className="mt-6 text-center text-xs italic opacity-60">
-        🔐 {t('contacts.atention')}
-      </p>
+      <div className='flex justify-start'>
+        <Button destination={'archive'} label={t('back')} />
+      </div>
     </div>
 
   );

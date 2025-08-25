@@ -106,7 +106,8 @@ export default function DetectiveJournal() {
           <BookBackCover />
         </div>
       </HTMLFlipBook>
-      <div className='flex w-full justify-end'>
+      <div className='flex w-full justify-between'>
+        <Button destination='suspect' label={t('back')} />
         <Button destination='contacts' label={t('archive.button')} />
       </div>
     </div>
