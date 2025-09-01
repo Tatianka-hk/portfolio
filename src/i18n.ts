@@ -5,7 +5,8 @@ import ua from "./static/languages/ua.json"
 import es from "./static/languages/es.json"
 import ca from "./static/languages/ca.json"
 
-const savedLang = localStorage.getItem("lang") || "en"
+const savedLang =
+    (typeof window !== "undefined" && localStorage.getItem("lang")) || "en"
 
 i18n.use(initReactI18next).init({
     resources: {
