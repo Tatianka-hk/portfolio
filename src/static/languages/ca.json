@@ -50,18 +50,18 @@
         "description": "Les pàgines següents contenen la meva investigació sobre les activitats sospitoses de Tetiana Gurkivska, sospitosa d’innovacions digitals...",
         "button": "Proves",
         "baseExperience": {
-            "basetis": {
-                "title": "Investigació Basetis",
-                "description": "Aquesta investigació recopila proves de les activitats de Tetiana Gurkivska: desenvolupament de dues aplicacions web completes amb autenticació (JWT, OAuth2), mòdul CRM, proves amb Vitest i visualització de dades."
+            "docsSpace": {
+                "title": "Operació DocsSpace",
+                "description": "Desenvolupament de tres aplicacions web, una aplicació d'escriptori, un bot de Telegram, processament de pagaments i eines de predicció de dades."
             },
             "softpro": {
                 "title": "Incident Softpro",
                 "description": "Noves dades indiquen una ràpida expansió de les capacitats tècniques: desenvolupament de biblioteques internes, integració de Mapbox, visualització amb ECharts i processament de geodades.",
                 "technicalEvidence": "Proves tècniques"
             },
-            "docsSpace": {
-                "title": "Operació DocsSpace",
-                "description": "Desenvolupament de dues aplicacions web, una aplicació d'escriptori, un bot de Telegram, processament de pagaments i eines de predicció de dades."
+            "basetis": {
+                "title": "Investigació Basetis",
+                "description": "Aquesta investigació recopila proves de les activitats de Tetiana Gurkivska: desenvolupament de dues aplicacions web completes amb autenticació (JWT, OAuth2), mòdul CRM, proves amb Vitest i visualització de dades."
             }
         },
         "other": {

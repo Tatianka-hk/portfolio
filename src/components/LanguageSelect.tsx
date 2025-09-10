@@ -22,6 +22,7 @@ export default function LanguageSelect() {
 
     const onChangeLanguage = (lang: string) => {
         if (typeof window !== 'undefined') localStorage.setItem('lang', lang);
+        document.cookie = `ui_lang=${encodeURIComponent(lang)}; Path=/; SameSite=Lax; Max-Age=${60 * 60 * 24 * 365}`;
         i18n.changeLanguage(lang);
     }
 

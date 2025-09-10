@@ -33,7 +33,7 @@ const ContactItem = (
     }
   }
   return (
-    <div className="flex flex-col items-center group cursor-pointer" onClick={copyToClipboard}>
+    <div className="flex flex-col items-center group cursor-pointer flex-1" onClick={copyToClipboard}>
       {isShow &&
         <Badge label={t('contacts.copied')} />
       }
@@ -62,7 +62,7 @@ const DetectiveContacts = () => {
 
         <div className="border-t-2 border-dashed border-[#3b2f2f] my-6"></div>
 
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap ">
           {contacts?.map((contact: Selectable) => (
             <ContactItem
               key={contact.label}

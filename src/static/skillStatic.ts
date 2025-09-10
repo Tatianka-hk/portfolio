@@ -58,6 +58,36 @@ export const education = [
 
 export const experience: ExperienceItem[] = [
     {
+        title: "archive.baseExperience.docsSpace.title",
+        date: "February 2024 – Present",
+        description: "archive.baseExperience.docsSpace.description",
+        listInstruments: [
+            "Python",
+            "React",
+            "PostgreSQL",
+            "Electron",
+            "Telegram bot",
+            "Data prediction tools",
+            "Docker",
+            "Apache",
+            "Nginx",
+        ],
+    },
+    {
+        title: "archive.baseExperience.softpro.title",
+        date: "June 2024 - November 2024",
+        description: "archive.baseExperience.softpro.description",
+        listInstruments: [
+            "Vue",
+            "Fastify",
+            "Mapbox",
+            "PostgreSQL",
+            "ECharts",
+            "Node.js",
+            "Redis",
+        ],
+    },
+    {
         title: "archive.baseExperience.basetis.title",
         date: "October 2023 - February 2024",
         description: "archive.baseExperience.basetis.description",
@@ -71,31 +101,6 @@ export const experience: ExperienceItem[] = [
             "CRM module",
             "Vitest tests",
             "Data visualization",
-        ],
-    },
-    {
-        title: "archive.baseExperience.softpro.title",
-        date: "June 2024 - November 2024",
-        description: "archive.baseExperience.softpro.description",
-        listInstruments: [
-            "Custom UI component library",
-            "Advanced mapping systems",
-            "Data visualization tools",
-            "Geodata processing capabilities",
-        ],
-    },
-    {
-        title: "archive.baseExperience.docsSpace.title",
-        date: "February 2024 – Present",
-        description: "archive.baseExperience.docsSpace.description",
-        listInstruments: [
-            "Python",
-            "Vue",
-            "PostgreSQL",
-            "Electron",
-            "Telegram bot",
-            "Payment processing",
-            "Data prediction tools",
         ],
     },
 ]

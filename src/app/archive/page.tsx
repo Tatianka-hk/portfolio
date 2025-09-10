@@ -1,6 +1,6 @@
 'use client'
-import React from 'react';
-import { Building, Calendar } from 'lucide-react';
+import React, { useEffect } from 'react';
+import { Calendar } from 'lucide-react';
 import HTMLFlipBook from 'react-pageflip';
 
 import { Button } from '../../ui';
@@ -73,8 +73,20 @@ export default function DetectiveJournal() {
     ...experiencePages
   ];
 
+  useEffect(() => {
+    document.documentElement.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden'
+
+    return () => {
+      document.documentElement.style.overflow = ''
+      document.body.style.overflow = ''
+    }
+  }, [])
+
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className='flex flex-col justify-center items-center  '
+      onWheel={(e) => e.preventDefault()}
+    >
       <HTMLFlipBook
         width={330}
         height={500}
@@ -83,7 +95,7 @@ export default function DetectiveJournal() {
         maxShadowOpacity={0.8}
         showCover={true}
         mobileScrollSupport={true}
-        className="detective-journal !p-0"
+        className="detective-journal !p-0  w-2/3"
         useMouseEvents={true}
         flippingTime={1000}
       >

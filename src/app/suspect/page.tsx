@@ -10,16 +10,16 @@ export default function Suspect() {
     const { t } = useTranslation();
 
     return (
-        <div className="min-h-screen bg-cover bg-center bg-custom-bg md:p-8  p-2">
+        <main className="min-h-screen bg-cover bg-center bg-custom-bg md:p-8  p-2">
             <div className="max-w-4xl mx-auto bg-paper-bg p-8 shadow-lg rounded-lg">
-                <div className="relative mb-8 flex justify-between items-center">
+                <header className="relative mb-8 flex justify-between items-center">
                     <h1 className="text-3xl font-bold text-primary font-top-secret">
                         {t('suspect.suspect_profile')}
                     </h1>
                     <SecretComponent />
-                </div>
+                </header>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <section className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className=" mb-8 min-w-0">
                         <h2 className="text-2xl font-bold text-primary mb-4 font-top-secret">
                             {t('suspect.hardskills')}
@@ -90,13 +90,13 @@ export default function Suspect() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
 
-                <div className="flex justify-between mt-8 w-full">
+                <footer className="flex justify-between mt-8 w-full">
                     <Button destination="" label={t('back')} />
                     <Button destination="archive" label={t('suspect.nextButton')} />
-                </div>
+                </footer>
             </div>
-        </div>
+        </main>
     );
 }
